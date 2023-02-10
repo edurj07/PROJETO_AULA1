@@ -1,0 +1,494 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/8/2023 8:11:01 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ATALAIA"
+  DTS:CreatorName="Atalaia\Atalaia"
+  DTS:DTSID="{4992D517-F0C7-4CF2-BE87-C12ED40BE32E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{8BE8A792-0526-420B-9410-6645686FDFD6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6015A69A-1364-4DD0-BFC8-3C5753DA0936}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\POWER_BI\ESCOLA DE DADOS - TULIO DAX\_ETL_INTEGRATION_SERVICE\DATASET_CSV.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{B08D791C-F028-4060-A0E2-14DB092D166B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NOME"
+              DTS:DTSID="{D22AF54B-BB13-4EA4-BA94-B1E6462B63A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PROFISSAO"
+              DTS:DTSID="{D9E0C89D-FB57-4171-9C56-67A6D4F7DA19}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PAIS"
+              DTS:DTSID="{1A5551AC-FF88-43C4-8CC1-BBC3C2D6C71B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{ACCF93B7-1CD8-4D2C-9D88-36EB1AD16C9A}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\POWER_BI\ESCOLA DE DADOS - TULIO DAX\_ETL_INTEGRATION_SERVICE\ETL_CSV_SSIS2.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{AF777E0F-90EE-419B-A6BB-CCA6CB697873}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NOME"
+              DTS:DTSID="{0996B090-0C40-45C9-B53C-775AF68C404D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PROFISSAO"
+              DTS:DTSID="{81AF26F5-32BA-47F8-86E0-B97848A34FD8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PAIS"
+              DTS:DTSID="{3AEE3FD4-08EE-41B6-9D9B-1BB403593E6A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarefa Fluxo de Dados"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{8D0522F7-64C9-4005-AB86-09A6B8E8C13A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarefa Fluxo de Dados"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarefa Fluxo de Dados\CSV_DESTINO"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destino de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de Arquivo Simples"
+              localeId="1046"
+              name="CSV_DESTINO"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se os dados substituirão o arquivo de destino ou serão anexados a ele."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica o texto a ser gravado no arquivo de destino antes da gravação de quaisquer dados."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando o qualificador de texto está habilitado, ele especifica se o qualificador de texto nos dados gravados no arquivo de destino serão de saída ou não."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples]"
+                  hasSideEffects="true"
+                  name="Entrada de Destino de Arquivo Simples">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples].Columns[ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[ID]"
+                      lineageId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples].Columns[NOME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NOME"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[NOME]"
+                      lineageId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples].Columns[PROFISSAO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PROFISSAO"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[PROFISSAO]"
+                      lineageId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].Columns[PROFISSAO]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples].Columns[PAIS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PAIS"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[PAIS]"
+                      lineageId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].Columns[PAIS]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[NOME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NOME" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[PROFISSAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PROFISSAO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[PAIS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PAIS" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origem de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Origem de Arquivo Simples"
+              localeId="1046"
+              name="CSV_ORIGEM"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se colunas de comprimento zero são tratadas como nulas."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome de uma coluna de saída que contém o nome do arquivo. Se nenhum nome for especificado, nenhuma coluna de saída contendo o nome de arquivo será gerada."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples]"
+                  name="Saída de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].Columns[ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ID]"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME]"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME]"
+                      name="NOME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].Columns[PROFISSAO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[PROFISSAO]"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].Columns[PROFISSAO]"
+                      name="PROFISSAO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].Columns[PAIS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[PAIS]"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].Columns[PAIS]"
+                      name="PAIS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NOME" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[PROFISSAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PROFISSAO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[PAIS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PAIS" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Erro de Origem de Arquivo Simples]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Coluna de Saída de Erro de Origem de Arquivo Simples"
+                      lineageId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      name="Coluna de Saída de Erro de Origem de Arquivo Simples" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarefa Fluxo de Dados.Paths[Saída de Origem de Arquivo Simples]"
+              endId="Package\Tarefa Fluxo de Dados\CSV_DESTINO.Inputs[Entrada de Destino de Arquivo Simples]"
+              name="Saída de Origem de Arquivo Simples"
+              startId="Package\Tarefa Fluxo de Dados\CSV_ORIGEM.Outputs[Saída de Origem de Arquivo Simples]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarefa Fluxo de Dados"
+          TopLeft="128,55" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarefa Fluxo de Dados">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Tarefa Fluxo de Dados\CSV_ORIGEM"
+          TopLeft="63,101" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Tarefa Fluxo de Dados\CSV_DESTINO"
+          TopLeft="62,253" />
+        <EdgeLayout
+          Id="Package\Tarefa Fluxo de Dados.Paths[Saída de Origem de Arquivo Simples]"
+          TopLeft="139.75,143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,110"
+              Start="0,0"
+              End="0,102.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,102.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
